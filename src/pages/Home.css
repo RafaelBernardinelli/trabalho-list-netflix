@@ -1,0 +1,10 @@
+.button-pagination {
+  background: none;
+  border: 3px solid red;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-inline: 20px;
+  cursor: pointer;
+  color: #fff;
+}
