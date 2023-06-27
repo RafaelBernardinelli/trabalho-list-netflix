@@ -10,7 +10,6 @@ const Home = () => {
   const [infos, setInfos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
-  const [totalElements, setTotalElements] = useState();
 
   const fetchMoviesData = async () => {
     try {
@@ -21,7 +20,6 @@ const Home = () => {
       );
 
       setInfos(response.data.results);
-      setTotalElements(response.data.total_results);
     } catch (error) {
       console.error(error);
     } finally {
@@ -44,7 +42,7 @@ const Home = () => {
   };
 
   const handleInputChange = (e) => {
-    setPage(e.target.value);
+    setPage(Number(e.target.value));
   };
 
   return (
@@ -57,7 +55,7 @@ const Home = () => {
           height: "100px",
           color: "#FFFFFF",
           justifyContent: "center",
-          marginTop: "10px",
+          marginBottom: "10px",
           alignItems: "center",
         }}
       >
