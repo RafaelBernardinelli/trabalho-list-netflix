@@ -28,7 +28,7 @@ const Details = ({ title, items, loading }) => {
         >
           <div className="details--vertical">
             <div className="details--horizontal">
-              <div className="details--name">{items.original_title}</div>
+              <div className="details--name">{items.title}</div>
               <div className="details--info">
                 <div className="details--points">
                   {items.vote_average} pontos
